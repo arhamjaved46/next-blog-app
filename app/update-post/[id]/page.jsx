@@ -6,7 +6,7 @@ import { HiOutlineHome } from "react-icons/hi";
 const fetchPost = async (id) => {
 
   try {
-    const response = await fetch(`http://localhost:3000/api/posts/${id}`, {
+    const response = await fetch(`/api/posts/${id}`, {
       cache: "no-store"
     });
 

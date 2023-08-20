@@ -11,7 +11,7 @@ export default function SinglePost({ p }) {
         const confirmed = confirm("Are you sure you want to delete this post?");
 
         if (confirmed) {
-            const response = await fetch(`http://localhost:3000/api/posts?id=${id}`, {
+            const response = await fetch(`/api/posts?id=${id}`, {
                 method: "DELETE",
             });
 
