@@ -22,7 +22,8 @@ export default function CreatePost({ heading, btnTitle }) {
     setCreating(true);
 
     try {
-      const response = await fetch("/api/posts", {
+      const URI = process.env.NEXT_PUBLIC_API_URL;
+      const response = await fetch(`${URI}/api/posts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

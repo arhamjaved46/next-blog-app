@@ -11,7 +11,8 @@ export default function SinglePost({ p }) {
         const confirmed = confirm("Are you sure you want to delete this post?");
 
         if (confirmed) {
-            const response = await fetch(`/api/posts?id=${id}`, {
+            const URI = process.env.NEXT_PUBLIC_API_URL;
+            const response = await fetch(`${URI}/api/posts?id=${id}`, {
                 method: "DELETE",
             });
 

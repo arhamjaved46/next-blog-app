@@ -21,7 +21,8 @@ export default function UpdatePost({ heading, btnTitle, title, description, id }
         setUpdating(true);
 
         try {
-            const response = await fetch(`/api/posts/${id}`, {
+            const URI = process.env.NEXT_PUBLIC_API_URL;
+            const response = await fetch(`${URI}/api/posts/${id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

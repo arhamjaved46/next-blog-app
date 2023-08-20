@@ -1,8 +1,8 @@
 import SinglePost from "@/components/SinglePost";
 
 const fetchPosts = async () => {
-
-  const response = await fetch("/api/posts", {
+  const URI = process.env.NEXT_PUBLIC_API_URL;
+  const response = await fetch(`${URI}/api/posts`, {
     cache: "no-store"
   });
   if (!response.ok) {

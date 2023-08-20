@@ -6,7 +6,8 @@ import { HiOutlineHome } from "react-icons/hi";
 const fetchPost = async (id) => {
 
   try {
-    const response = await fetch(`/api/posts/${id}`, {
+    const URI = process.env.NEXT_PUBLIC_API_URL;
+    const response = await fetch(`${URI}/api/posts/${id}`, {
       cache: "no-store"
     });
 
