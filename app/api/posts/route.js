@@ -6,7 +6,7 @@ export async function GET() {
 
     await connection();
     try {
-        const posts = await Posts.find();
+        const posts = await Posts.find().sort( { '_id': -1 } ).limit(10)
         return NextResponse.json({ posts });
     } catch (error) {
         console.log("Failed to fetch posts", error.message);

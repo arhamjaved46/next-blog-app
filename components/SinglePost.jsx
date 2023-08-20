@@ -23,9 +23,9 @@ export default function SinglePost({ p }) {
 
     return (
         <>
-            <div className="mb-6 border rounded">
+            <div className="mb-6 border rounded hover:shadow-md">
                 <h2 className="px-6 py-3 text-xl font-medium bg-slate-50">{p.title}</h2>
-                <p className="px-6 py-3">{p.description}</p>
+                <p className="px-6 py-3 max-h-[158px] overflow-hidden">{p.description}</p>
                 <div className="flex items-center justify-end gap-2 px-6 py-2 bg-slate-50">
                     <Link href={`/update-post/${p._id}`} className="px-2 py-1 text-sm text-white bg-black rounded">Update</Link>
                     <div className="p-1 text-sm text-red-500 border border-red-500 rounded cursor-pointer hover:bg-red-500 hover:text-white" onClick={() => handleDelete(p._id)} >Delete</div>
