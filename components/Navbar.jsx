@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <nav className="fixed flex items-center justify-between w-full p-8 border bg-slate-50">
       <Link href={"/"}>
-        <Image src={"../next.svg"} alt="Next-logo" width={130} height={130} />
+        <Image src={"../next.svg"} alt="Next-logo" width={120} height={100} />
       </Link>
       <Link
         href={"/create-post"}
