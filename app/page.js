@@ -26,7 +26,7 @@ export default async function Home() {
         ))
       }
 
-      <h3 className="font-bold text-center text-gray-600">***Display only first 10 posts for now 🙂***</h3>
+      <h3 className="font-bold text-center text-gray-600">***Display only 10 posts for now 🙂***</h3>
     </div>
   );
 }
